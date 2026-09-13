@@ -1,0 +1,47 @@
+1st prompt and response:
+Prompt:
+Ok I want to add a sort of update pack that considers the area a person is in, known hotspots and activities based on the area and the day of the week it is, can have a "current weather?" option too, let's keep that as Los Angeles, CA for testing. This will also want to look flashy, as an expansion pack, essentially. So I am thinking to add a Title Screen that a user will need to make a selection of "Version 1" or "Sunny SOCAL Expansion!" with the expansion having responses of the Version 1 setup and also providing responses for the new dropdown section including area the user is in, day of the week, and weather.
+
+What would be a good prompt to give back to you, staying in this same project, only developing and updating locally before I may/may not choose to sync in git and make changes in the app online?
+
+Response:
+Here’s a copy-ready prompt that keeps the expansion manageable and local:
+Continue developing What Should I Do? in:
+C:\Users\danie\Desktop\What Should I Do
+Build a “Sunny SOCAL Expansion!” alongside the existing Version 1.
+Experience
+- Add a polished title screen with two choices: Version 1 and Sunny SOCAL Expansion!
+- Preserve Version 1’s existing recommendations and behavior.
+- Give the expansion a bright, Southern California visual style, tasteful animation, and a clear way to return to the title screen.
+- Retain the existing confetti, fanfare, sound toggle, and reduced-motion support.
+Expansion inputs
+Keep the existing check-in controls and add an optional section for:
+- Area: Start with a small, useful selection of Los Angeles neighborhoods or regions, plus “Anywhere in Los Angeles.”
+- Day of the week: Default to today, but allow changing it.
+- Weather: Let users choose conditions manually, including “Not sure.” For this local MVP, use manual weather rather than a live weather service.
+Recommendations
+- Continue showing one primary recommendation and two alternatives, with explanations.
+- Combine the original activities with curated Los Angeles destinations and activities.
+- Make area, day, and weather meaningfully influence suitability without overriding health, energy, time, or budget constraints.
+- Include practical details when relevant: neighborhood, indoor/outdoor setting, approximate cost, and a destination’s official website.
+- Browse public, official sources to verify named places and recurring weekly activities. Record sources and verification dates separately from the scoring logic.
+- Don’t invent events, opening hours, current weather, or availability. Clearly distinguish suggestions from confirmed current conditions.
+- Treat available time as including travel; avoid recommending a distant outing for a short break. Use transparent rough travel allowances rather than claiming live routing.
+Scope and boundaries
+- Develop and test locally only. Do not push to GitHub, upload files, redeploy Cloudflare, or change the live website.
+- Keep all file changes, scratch files, and backups inside the existing project folder.
+- No accounts, paid APIs, location permissions, or new services. Ask before adding an external integration.
+- Keep activity data easy to edit and the recommendation logic understandable.
+- Create a recoverable local checkpoint before changing the app.
+- Work in small bites to conserve usage. Update the local README after each milestone with changes, test results, and the next step.
+Start with the title screen and expansion controls, then add the Los Angeles library and scoring. Test contrasting scenarios and confirm Version 1 still works. Stop when the local expansion is ready for me to evaluate; publishing will be a separate decision.
+
+The key simplification is manual weather first. It lets us test whether weather improves the recommendations before introducing live-data dependencies.
+----
+
+Asked to assist with beginning in a second chat and this was the next good response for that:
+
+"Before starting, read the local README and inspect the existing project. Continue from the files already there; don’t rebuild from scratch. Treat the README’s standing guardrails as part of this request."
+
+----
+

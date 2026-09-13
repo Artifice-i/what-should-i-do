@@ -1,0 +1,8 @@
+Help me build [idea], solving [problem] for [audience].
+Start with a small working V1. Use my existing Node.js/npm, Python, Git, VS Code, and browser. Prefer the simplest suitable stack and minimal dependencies.
+Create one dedicated folder on my Desktop. Keep all project files, temporary files, backups, and local edits inside it. Ask before changing anything elsewhere, installing system-wide software, changing settings, accessing unrelated personal data, or using paid services.
+Work in small, recoverable milestones to conserve usage. Avoid long planning documents, repeated checks, unnecessary tools, and extra features. Test the important behavior. After each milestone, update the local README with what works, launch instructions, test results, and the exact next step.
+Use local Git checkpoints when available. Clearly distinguish local saves, commits, GitHub uploads, and deployments. Never claim a step succeeded without verification.
+Prepare for GitHub and Cloudflare hosting, but get my approval before first publishing or connecting external accounts. Keep secrets and local backups out of uploads.
+When I say “chat only,” take no actions. When I say “next bite,” complete one bounded milestone and leave a concise handoff.
+Finish V1 before suggesting V2. If interrupted, resume from the README and verified project state rather than starting over.

@@ -1,0 +1,279 @@
+Built and running: Open What Should I Do? http://127.0.0.1:4173
+- 44 activities, one emphasized recommendation, two alternatives, and explanations.
+- All requested inputs, with optional fine-tuning.
+- Approve or reject suggestions; rejected activities stay excluded until refresh.
+- Plain HTML/CSS/JavaScript with a small Node.js server. No dependencies, accounts, or API keys.
+Location: C:\Users\danie\Desktop\What Should I Do
+Launch again: Double-click Launch.cmd inside that folder. Keep its terminal open while using the app. Instructions and scoring details are in README.md.
+Verified: Seven automated tests, 324 combinations of limits, contrasting mood/energy scenarios, browser feedback and empty-state flows, desktop layout, and launcher startup. No browser warnings or errors.
+MVP limits: Costs and availability are estimates. Feedback resets on refresh. Very restrictive inputs can yield fewer than three compatible activities.
+Useful V2 options: An activity editor, equipment/access preferences, and optional local favorites/history. V2 has not been started.
+An initial Git checkpoint was saved. The sandbox continued denying the final commit despite granted permission; the finished files and tests are saved, but those final additions remain uncommitted.
+
+----
+Updates:
+-Confetti and fanfare when "Sounds Good" button is selected.
+
+----
+Original PROMPT:
+
+I want you to build me a small but polished personal **“What Should I Do?” activity recommender** that I can run locally on this PC.
+
+## Goal
+
+This app is for moments when I have free time but don't know what I actually feel like doing.
+
+Instead of overwhelming me with a huge list, it should take my current situation and mood into account and make a strong recommendation.
+
+I want it to eventually become something I genuinely use when I'm bored, restless, indecisive, tired, or simply looking for something worthwhile to do.
+
+## Development Environment
+
+My PC already has:
+
+- Node.js / npm
+- Python
+- Git
+- VS Code
+- A modern web browser
+
+Use the existing development environment.
+
+Choose the simplest appropriate technology from what is already available. Avoid unnecessary frameworks, services, databases, accounts, cloud infrastructure, or dependencies.
+
+Build a working local MVP first rather than overengineering the architecture.
+
+## Core App
+
+Create a clean, easy-to-use interface that asks me about my current situation.
+
+At minimum, account for:
+
+- **Energy level** — such as 1–10
+- **Available time**
+- **Health / feeling sick**
+- **Stay home or go out**
+- **Budget / how much I'm willing to spend**
+- **Current mood**
+- **Mental stimulation desired**
+- **Physical activity desired**
+- **Whether I want to be alone or social**
+
+Allow me to indicate what kind of experience I'm currently interested in, including:
+
+- Entertainment
+- Productivity
+- Learning
+- Creativity
+- Social activity
+- Relaxation
+- Physical activity / getting outside
+
+Don't require every field if that would make the app annoying to use. Use good, golden ratio, UX judgment.
+
+## Recommendations
+
+After receiving my inputs, give me:
+
+**1 primary recommendation**
+
+and
+
+**2 alternative recommendations.**
+
+For each recommendation, briefly explain **why it fits my current inputs**.
+
+The primary recommendation should be visually emphasized.
+
+Avoid dumping dozens of choices on me. The entire purpose is to reduce indecision.
+
+Recommendations should feel meaningfully different depending on my inputs rather than being generic random activities.
+
+For example, someone who is sick, has low energy, wants mental stimulation, has two hours available, and wants to stay home should receive substantially different recommendations from someone with high energy, $50 to spend, six hours available, and a desire to leave home and socialize.
+
+## Activity System
+
+Create an initial library of varied activities so the recommender is interesting enough to actually test.
+
+Include activities across areas such as:
+
+- Gaming
+- Movies / shows / videos
+- Reading
+- AI experimentation
+- Building small projects
+- Programming
+- Learning something
+- Creative projects
+- Music
+- Relaxation
+- Going for a drive
+- Exploring somewhere
+- Food
+- Exercise
+- Outdoor activities
+- Social activities
+- Personal projects
+- Small productive tasks
+
+Design the activity data so that adding, removing, and editing activities later is straightforward.
+
+Do not hard-code the recommendation logic in a way that makes future expansion unnecessarily difficult.
+
+## Recommendation Logic
+
+For the MVP, do **not** require an external AI API, paid service, account, or API key.
+
+Create sensible local recommendation/scoring logic based on the user's inputs.
+
+The recommendation should consider compatibility between the user's current state and attributes of each activity.
+
+Make the logic understandable enough that we can improve it later.
+
+A future version may use an AI model, personal history, preferences, feedback, location, weather, calendar information, or other contextual information, so don't design the MVP in a way that prevents those additions.
+
+However, **do not implement those integrations yet.**
+
+## Feedback
+
+Give me a simple way to indicate whether a recommendation was useful, such as:
+
+- Sounds good
+- Not feeling it
+
+If it can be done simply without bloating the MVP, use that feedback during the current session to avoid repeatedly recommending things I've rejected.
+
+Do not build a complicated account or permanent-profile system just for this feature.
+
+## UI
+
+Make it visually pleasant and modern rather than looking like a programming exercise.
+
+Prioritize:
+
+- Simplicity
+- Large readable controls
+- Clear hierarchy
+- Minimal clutter
+- Fast interaction
+- A recommendation result that feels satisfying to reveal
+
+It should work well on a normal desktop browser.
+
+You have freedom to make reasonable UI/UX decisions.
+
+## Your Autonomy
+
+Create a new dedicated project folder, on my desktop only, for this application.
+
+Inside that project folder, you have permission to:
+
+- Create files and folders
+- Modify files
+- Delete files that you created for this project
+- Install project-local dependencies when genuinely necessary
+- Run normal development commands
+- Start and stop the local development server
+- Run tests
+- Inspect errors and logs
+- Debug problems
+- Refactor your own project code
+- Fix problems you discover
+- Use Git for this project
+- Iterate on the implementation without asking me for permission for ordinary development decisions
+
+You do **not** need to stop and ask me about routine implementation choices.
+
+Use your judgment and continue working toward a functional MVP.
+
+## PC Guardrails
+
+Your autonomy is limited to this project and normal development operations required to build it.
+
+**Ask me before doing any of the following:**
+
+- Installing system-wide software
+- Uninstalling software
+- Changing Windows or system settings
+- Changing security settings
+- Modifying environment variables globally
+- Modifying or deleting files outside the dedicated project folder
+- Accessing my personal documents, photos, browser history, messages, emails, saved passwords, credentials, tokens, or other personal data
+- Accessing external accounts or services
+- Uploading any of my data or files
+- Publishing or deploying the application publicly
+- Opening ports beyond what is normally required for a local development server
+- Making purchases or using paid APIs/services
+- Performing destructive or difficult-to-reverse operations outside the project
+- Doing anything that materially affects the rest of my PC
+
+If something outside those boundaries would substantially improve the project, explain what you want to do and why, then ask me first.
+
+Do not weaken or bypass security protections for convenience.
+
+## Git / Recovery
+
+Initialize the project as a Git repository if appropriate.
+
+Use Git checkpoints/commits at sensible milestones so that a working version can be recovered if later changes break something.
+
+Do not interact with remote GitHub repositories or publish anything unless I explicitly ask.
+
+## How I Want You to Work
+
+Do not spend a long time producing a giant architecture document before building.
+
+Make reasonable decisions yourself.
+
+Work iteratively:
+
+1. Establish the project.
+2. Build the simplest functional version.
+3. Run it.
+4. Test the major user flow.
+5. Fix errors you encounter.
+6. Improve obvious usability problems.
+7. Verify that the finished MVP runs successfully.
+8. Then present it to me.
+
+If you encounter an ordinary coding problem, investigate and attempt to solve it yourself rather than immediately asking me what to do.
+
+If an implementation choice isn't important to me, choose one yourself.
+
+Do not add complexity merely because you can.
+
+## Definition of Done
+
+I should be able to launch the application locally, enter how I'm currently feeling and what I want, and receive:
+
+- One strong primary recommendation
+- Two alternatives
+- A short explanation of why each fits me
+- A simple way to reject or approve a suggestion
+
+The recommendations should noticeably respond to different combinations of inputs.
+
+The application should run without obvious errors.
+
+When you've reached that point, stop development and show me:
+
+- What you built
+- What technology you chose
+- Where the project is located
+- How I launch it again
+- What you tested
+- Any important limitations of the MVP
+- A short list of the most valuable possible improvements for V2
+
+Do **not** automatically begin building V2.
+
+I want to use and evaluate V1 first.
+
+----
+Tested and shared out to friends.
+More discussions had about evaluating the product and process.
+Project Synopsis and What We Learned text files create in the Notes folder.
+V2 thought up to include a title page, and updated features like location, weather, known good activities for the region, packaged as an expansion set.
+
+----
+V2 Work Starts in How it's made2.txt
